@@ -205,19 +205,3 @@ METHOD PATH STATUS LATENCY_MS IP
 ```
 
 Other formats such as JSON, syslog, and CloudTrail are not supported in the current version.
-
-## ⚠️ Limitations
-
-- Security detections are heuristic indicators, not proof of malicious activity.
-- Authentication and endpoint-scan thresholds aggregate over the uploaded file rather than using a time window.
-- No machine learning, IP reputation lookup, geo-IP enrichment, live monitoring, or attack blocking is implemented.
-- Combined Apache/Nginx logs do not provide request latency.
-- Very large logs are not streamed in this version; the file is loaded into memory.
-- Dashboard upload limit is 20 MB.
-- Do not upload sensitive production logs to a public deployment.
-
-## 👩‍💻 Resume Description
-
-**LogSentinel | Python, Streamlit, Pandas, Cybersecurity**
-
-Developed a security log analytics dashboard supporting custom and Apache/Nginx access logs. Implemented explainable detection rules for suspicious request patterns, authentication failures, sensitive-path probes and endpoint scanning; visualized traffic, error and latency trends; and exported JSON/CSV investigation reports.
